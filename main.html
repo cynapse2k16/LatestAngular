@@ -1,0 +1,125 @@
+<ul id="scene" class="scene unselectable"
+    data-friction-x="0.1"
+    data-friction-y="0.1"
+    data-scalar-x="25"
+    data-scalar-y="15">
+    <li class="layer" data-depth="0.00"></li>
+    <li class="layer" data-depth="0.10">
+        <object width="100%" height="100%" data="bg/index.html"></object>
+        <div class="background"></div>
+    </li>
+    <li class="layer" data-depth="0.10">
+        <div class="light orange b phase-4"></div>
+    </li>
+    <li class="layer" data-depth="0.10">
+        <div class="light purple c phase-5"></div>
+    </li>
+    <li class="layer" data-depth="0.10">
+        <div class="light orange d phase-3"></div>
+    </li>
+    <li class="layer" data-depth="0.15">
+        <ul class="rope depth-10">
+            <li><img src="assets/images/rope.png" alt="Rope"></li>
+            <li class="hanger position-2">
+                <div class="board cloud-22 swing-1"></div>
+            </li>
+            <li class="hanger position-4">
+                <div class="board cloud-11 swing-3"></div>
+            </li>
+            <li class="hanger position-8">
+                <div class="board birds1 swing-5"></div>
+            </li>
+        </ul>
+    </li>
+    <h1 class="title"><strong>Cynapse<em> 2016</em></strong></h1>
+    <!-- <img class="title" src="assets/images/emma.png"> --></li>
+    <li class="layer" data-depth="0.30">
+        <ul class="rope depth-30">
+            <li><img src="assets/images/rope.png" alt="Rope"></li>
+            <li class="hanger position-1">
+                <div class="board cloud-1 swing-3"></div>
+            </li>
+            <li class="hanger position-5">
+                <div class="board cloud-4 swing-1"></div>
+            </li>
+        </ul>
+    </li>
+    <li class="layer" data-depth="0.30">
+        <div class="wave paint depth-30"></div>
+    </li>
+    <li class="layer" data-depth="0.40">
+        <div class="wave plain depth-40"></div>
+    </li>
+    <li class="layer" data-depth="0.50">
+        <div class="wave paint depth-50"></div>
+    </li>
+    <li class="layer" data-depth="0.60">
+        <div class="lighthouse depth-60">
+            <div class=" go depth-60"></div>
+        </div>
+    </li>
+
+    <li class="layer" data-depth="0.60">
+        <ul class="rope depth-60">
+            <li><img src="assets/images/rope.png" alt="Rope"></li>
+            <li class="hanger position-3">
+                <div class="board birds swing-5"></div>
+            </li>
+            <li class="hanger position-6">
+                <div class="board cloud-2 swing-2"></div>
+            </li>
+            <li class="hanger position-8">
+                <div class="board cloud-3 swing-4"></div>
+            </li>
+        </ul>
+    </li>
+    <li class="layer" data-depth="0.60">
+        <div class="wave plain depth-60"></div>
+    </li>
+    <li class="layer" data-depth="0.80">
+        <div class="wave plain depth-80"></div>
+    </li>
+    <li class="layer" data-depth="1.00">
+        <div class="wave paint depth-100"></div>
+    </li>
+</ul>
+
+<section ng-repeat="flipper in flippers" id="{{ flipper.name }}" class="wrapper about hide accelerate">
+    <div class="cell accelerate">
+        <div class="cables center accelerate">
+            <div class="panel accelerate">
+                <header>
+                    <h1 style="color:rgba(213,121,111,0.9);font-weight:400;">{{flipper.title}}</h1>
+                </header>
+                <img src="./assets/images/batman-vs-superman-review-pic.jpg">
+
+                <ul class="links" ng-if="flipper.buttonLayer1">
+                    <li><a style="color:white" class="yes" href="#" ui-sref="events">Yes</a></li>
+                    <li><a style="color:white" class="no" href="#" ui-sref="about">No</a></li>
+                </ul>
+                <ul class="links" ng-if="flipper.buttonLayer2">
+                    <li><a style="color:white" class="yes" href="#" ui-sref="{{flipper.name}}">Enter</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button id="events-toggle" class="toggle i" style="left:25%" ng-click="toggle('events')">
+    <div class="cross">
+        <div class="x"></div>
+        <div class="y"></div>
+    </div>
+</button>
+<button id="about-toggle" class="toggle i" style="left:50%" ng-click="toggle('about')">
+    <div class="cross">
+        <div class="x"></div>
+        <div class="y"></div>
+    </div>
+</button>
+<button id="details-toggle" class="toggle i" style="left:75%" ng-click="toggle('details')">
+    <div class="cross">
+        <div class="x"></div>
+        <div class="y"></div>
+    </div>
+</button>

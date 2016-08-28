@@ -1,0 +1,57 @@
+<ul id="scene" class="scene unselectable"
+    data-friction-x="0.1"
+    data-friction-y="0.1"
+    data-scalar-x="25"
+    data-scalar-y="15">
+    <li class="layer" data-depth="0.00"></li>
+    <li class="layer" data-depth="0.10">
+        <object width="100%" height="100%" data="bg/index.html"></object>
+        <div class="background"></div>
+    </li>
+
+    <li class="layer" data-depth="0.30">
+        <div class="row">
+            <div class="eventHead col s3">
+                <div class="arc leftArc">
+                    <p class="evenText" id="ev1"><a href="" ng-click="update(0)"><i class="fa fa-hand-o-right"
+                                                                                    aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+            <div class="col s6 rd ">
+                <div class="circle rounded" id="rcenter">
+                    <h2 ng-hide="loaded" class="animated infinite bounce ">Surprise! Click on the arrows to know about
+                        our events!</h2>
+                    <div ng-show="loaded" class="eventDetails">
+                        <h2>{{ event.title }}</h2>
+                        <h4>{{event.details}}</h4>
+                        <h3>Event Format</h3>
+                        <ol ng-repeat="for in event.format track by $index ">
+                            <li>{{for}}</li>
+                        </ol>
+                        <h3>Event Rules</h3>
+                        <ol ng-repeat="rule in event.rules track by $index ">
+                            <li>{{rule}}</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+            <div class="eventHead col s3">
+                <div class="arc rightArc">
+                    <p class="evenText" id="ev2"><a href="" ng-click="update(1)"><i class="fa fa-hand-o-left"
+                                                                                    aria-hidden="true"></i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="eventHead row">
+            <div class="arc botArc">
+                <p class="evenText1"><a href="" ng-click="update(2)"><i class="fa fa-hand-o-up" aria-hidden="true"></i></a>
+                </p>
+            </div>
+        </div>
+    </li>
+
+</ul>
+
+
+
